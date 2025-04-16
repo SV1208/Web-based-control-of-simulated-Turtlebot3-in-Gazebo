@@ -3,7 +3,7 @@
 A responsive web-based interface to control a TurtleBot3 robot using ROS 2 and ROSBridge. This dashboard allows you to drive the robot, view its camera feed, monitor odometry, and adjust speed settings—all from a browser.
 
 ## 🎥 Demo Video
-[![Web Control of Simulated Turtlebot3 in Gazebo](https://img.youtube.com/vi/_MS_qQtVF6o/0.jpg)](https://www.youtube.com/watch?v=_MS_qQtVF6o)
+[![Web Control of Simulated Turtlebot3 in Gazebo]([https://img.youtube.com/vi/_MS_qQtVF6o/0.jpg](https://github.com/SV1208/Web-based-control-of-simulated-Turtlebot3-in-Gazebo/blob/main/web-based-controller.png))](https://www.youtube.com/watch?v=_MS_qQtVF6o)
 
 ---
 
