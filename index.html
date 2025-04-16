@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TurtleBot3 Web Control</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ROSLIB -->
+  <script src="https://cdn.jsdelivr.net/npm/roslib/build/roslib.min.js"></script>
+
+  <!-- Styles and Script -->
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <header id="status">🔌 Connecting to ROSBridge...</header>
+
+  <div class="container">
+    <div class="left-panel">
+      <img src="http://localhost:8080/stream?topic=/camera/image_raw" alt="Camera Feed">
+      <div id="odomStatus">Position: x=0.00, y=0.00</div>
+    </div>
+
+    <div class="right-panel">
+      <div class="control-buttons">
+        <h3>Control Buttons</h3>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 5px;">
+          <button onclick="move('forward')">⬆️ Forward</button>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 5px;">
+          <button onclick="move('left')">⬅️ Left</button>
+          <button onclick="move('stop')">⏹ Stop</button>
+          <button onclick="move('right')">➡️ Right</button>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 15px;">
+          <button onclick="move('backward')">⬇️ Backward</button>
+        </div>
+      </div>
+
+      <div class="speed-settings">
+        <label for="linearSpeed"><strong>Linear Speed (m/s):</strong></label>
+        <input type="number" id="linearSpeed" step="0.1" value="0.2" min="0" max="2" onchange="updateSpeedInputs()"><br>
+
+        <label for="angularSpeed"><strong>Angular Speed (rad/s):</strong></label>
+        <input type="number" id="angularSpeed" step="0.1" value="0.5" min="0" max="5" onchange="updateSpeedInputs()"><br>
+      </div>
+
+      <div class="log-panel" id="log"></div>
+    </div>
+  </div>
+
+</body>
+</html>
